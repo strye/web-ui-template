@@ -1,0 +1,100 @@
+@import url("boilerplate.css");
+@import url("color-pallet.css");
+@import url("active-icons.css");
+
+/* Basic Styling
+----------------------------------------------- */
+html,
+body
+{
+	height: 100%;
+	font-size: 14px;
+	font-family: "Amazon Ember", "Lucida Grande", Helvetica, Arial, Sans-Serif;
+	margin: 0;
+	color: #232323;
+	background-color: #fff;
+	text-align: center;
+}
+
+
+
+h1{font-size: 1.4em}
+h2{font-size: 1.2em;font-weight: bold; padding:4px;margin-bottom:6px;}
+h3{font-size: 1.1em; font-variant: all-small-caps;}
+h4{font-size: 1em; font-style: italic;font-variant: all-small-caps;}
+h5{font-size: 0.9em; font-style: italic;font-variant: all-small-caps;}
+
+hr { height: 1px; background: lightgray; border: none; }
+
+
+button {background-color: var(--color-4);}
+
+a { color: #ff9900; }
+
+
+
+header {
+	text-align: left;
+	position: relative; 
+
+	padding: 16px;
+	background-color: var(--secondary-bg-color);
+	color: var(--secondary-fn-color);
+	height:60px;
+	margin:0;
+	box-shadow: 0 5px 10px #888;
+}
+header h1 {font-size: 1.5em; padding: 0; margin: 0 8px;text-align: left;}
+
+.nav-menu {margin-top: 24px; text-align: right;}
+.nav-menu a, #btLogout, #btLogin {color:var(--secondary-fn-color); padding: 4px 12px;}
+.nav-menu a:hover, #btLogout:hover, #btLogin:hover {background-color: var(--color-3);color:#000;}
+#btLogout, #btLogin {cursor: pointer;}
+
+.page {
+	text-align: left;
+    padding: 6px 12px 0 12px;
+	/*
+	margin-top: 6px;
+	padding: 6px 0;
+	*/
+}
+.page h1 {margin: -6px -12px 8px -12px; padding: 12px; background-color: var(--color-7);}
+.page h2 {margin: 12px 0; border-bottom: 2px solid #000; }
+
+
+.content {
+	margin: 15px 20px;
+	text-align: left;
+}
+
+
+footer {background-color: #333; padding:6px 0 0 6px; color:#eee; margin:0;
+	position: fixed; bottom: 0;width:100%;height:25px;}
+footer h2 {font-size: .9em; font-style: italic;width:960px;text-align: center;margin:0 auto;border:0;}
+
+
+
+/*** UI CARDS ***/
+
+/*** TAGS ***/
+.tag {
+    display: block;
+	float: left;
+	position: relative;
+	margin: 4px 8px;
+	border: 2px solid #000;
+	border-radius: 2px; 
+    color:#000;
+}
+.tag-text {
+	padding: 4px 8px;
+}
+.tag-bg {
+	position: absolute;
+	background-color: rgb(253, 205, 47);
+	opacity: 0.25;
+	width: 100%;
+	height:100%;
+}
+

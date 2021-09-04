@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+    <body>
+		<!--<amplify-authenticator hideSignUp="true">-->
+			<div class="app">
+				<div class="app-header">
+					<div class="app-title">
+						<!--<img src="https://aws-amplify.github.io/images/Logos/Amplify-Logo-White.svg" alt="AWS Amplify" />-->
+						<span>Day By Day</span>	
+					</div>
+					<div class="hdr-toolbar">
+						<!--<amplify-sign-out></amplify-sign-out>-->
+					</div>
+				</div>
+				<div class="app-body">
+					<page-manager id="pageManager">
+						<landing-page id="home" class="selected"></landing-page>
+						<session-page id="session"></session-page>
+					</page-manager>	
+				</div>
+			</div>
+			<!--<amplify-sign-in header-text="Sticky Storm SignIn" slot="sign-in"></amplify-sign-in>-->
+		<!--</amplify-authenticator>-->
+	
+		<script src="main.bundle.js"></script>
+    </body>
+</html>
