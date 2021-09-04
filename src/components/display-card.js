@@ -1,8 +1,9 @@
+import styles from "../styles/display-card.style.css";
 
 const template = document.createElement('template');
 template.innerHTML = /*html*/`
 <style>
-	@import url("../styles/display-card.css");
+	/*@import url("/styles/display-card.css");*/
 	:host {
         display: inline-block;
 		text-align: center;

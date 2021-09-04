@@ -1,6 +1,6 @@
 import DM from './dm.js'
 import './components/elementImports.js'
-
+import css from "./styles/main.css";
 
 document.addEventListener('DOMContentLoaded', event => {
     let pageManager = document.getElementById('pageManager'),
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', event => {
         pageManager.switchPage(page);
     })
 
-    homeLnk.listen('click', e=>{
+    homeLnk.addEventListener('click', e=>{
         pageManager.switchPage('home');
     });
 

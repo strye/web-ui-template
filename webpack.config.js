@@ -14,7 +14,15 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /(?<!\.style).css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.style\.css$/i,
+                use: ['css-loader']
+            }        
         ]
     },
     devServer: {
@@ -27,7 +35,8 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin({
             patterns: [
-                'index.html'
+                'index.html',
+                { from: "./src/assets", to: "assets" }
             ]
         }),
         new webpack.HotModuleReplacementPlugin()

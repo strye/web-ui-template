@@ -3,7 +3,7 @@
 let template = document.createElement('template');
 template.innerHTML = /*html*/`
 	<style>
-        @import url("../styles/bm-tabs.css");
+        /*@import url("../styles/bm-tabs.css");*/
         :host {cursor: pointer}
     </style>
     <div id="tab" class="tab"><slot></slot></div>

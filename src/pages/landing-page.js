@@ -30,7 +30,7 @@ class LandingPage extends HTMLElement {
         const gotoTabs = this.shadowRoot.getElementById("gotoTabs");
         const gotoAbout = this.shadowRoot.getElementById("gotoAbout");
 
-        gotoCards.addEventListener("click", (evt) => {
+        gotoCards.addEventListener("click", (e) => {
             self.dispatchEvent(new CustomEvent('select', {
                 bubbles: true,
                 composed: true,
@@ -38,7 +38,7 @@ class LandingPage extends HTMLElement {
             }));
             e.stopPropagation();
         });
-        gotoTabs.addEventListener("click", (evt) => {
+        gotoTabs.addEventListener("click", (e) => {
             self.dispatchEvent(new CustomEvent('select', {
                 bubbles: true,
                 composed: true,
@@ -46,7 +46,7 @@ class LandingPage extends HTMLElement {
             }));
             e.stopPropagation();
         });
-        gotoAbout.addEventListener("click", (evt) => {
+        gotoAbout.addEventListener("click", (e) => {
             self.dispatchEvent(new CustomEvent('select', {
                 bubbles: true,
                 composed: true,

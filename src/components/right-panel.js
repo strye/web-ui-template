@@ -3,7 +3,7 @@
     let template = document.createElement('template');
 template.innerHTML = /*html*/`
     <style>
-		@import url("/styles/right-menu.css");
+		/*@import url("/styles/right-menu.css");*/
         :host {
             text-align: left;
             position: relative; 
