@@ -1,7 +1,7 @@
 {
-  "name": "dbd-ui",
+  "name": "web-ui-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple template with web components packaged with webpack",
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack && webpack-dev-server --mode development",

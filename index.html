@@ -6,26 +6,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
     <body>
-		<!--<amplify-authenticator hideSignUp="true">-->
-			<div class="app">
-				<div class="app-header">
-					<div class="app-title">
-						<!--<img src="https://aws-amplify.github.io/images/Logos/Amplify-Logo-White.svg" alt="AWS Amplify" />-->
-						<span>Day By Day</span>	
-					</div>
-					<div class="hdr-toolbar">
-						<!--<amplify-sign-out></amplify-sign-out>-->
-					</div>
+		<div class="app">
+			<div class="app-header">
+				<div class="app-title">
+					<img src="/assets/malgen_logo/png" alt="Malignant Genius" />
+					<span>Day By Day</span>	
 				</div>
-				<div class="app-body">
-					<page-manager id="pageManager">
-						<landing-page id="home" class="selected"></landing-page>
-						<session-page id="session"></session-page>
-					</page-manager>	
+				<div class="hdr-toolbar">
+					<a id="gotoHome" href="#">Home</a>
 				</div>
 			</div>
-			<!--<amplify-sign-in header-text="Sticky Storm SignIn" slot="sign-in"></amplify-sign-in>-->
-		<!--</amplify-authenticator>-->
+			<div class="app-body">
+				<page-manager id="pageManager">
+					<landing-page id="home" class="selected"></landing-page>
+					<cards-page id="cards"></cards-page>
+					<tabs-page id="tabs"></tabs-page>
+					<about-page id="about"></about-page>
+				</page-manager>
+			</div>
+		</div>
 	
 		<script src="main.bundle.js"></script>
     </body>

@@ -5,17 +5,14 @@ import './components/elementImports.js'
 document.addEventListener('DOMContentLoaded', event => {
     let pageManager = document.getElementById('pageManager'),
     homeElm = DM.Target(pageManager.pages.home.elm),
-    sessionElm = DM.Target(pageManager.pages.session.elm);
+    homeLnk = document.getElementById('gotoHome');
 
     homeElm.listen('select', e=>{
-        let sess = e.detail;
-        //console.log(`session seleceted: "${sess.title}"`)
-        pageManager.switchPage('session');
-        sessionElm.elm.sessionData = sess;
+        let page = e.detail;
+        pageManager.switchPage(page);
     })
 
-    sessionElm.listen('nav:home', e=>{
-        //console.log('nav:home', e)
+    homeLnk.listen('click', e=>{
         pageManager.switchPage('home');
     });
 
