@@ -28,13 +28,15 @@ code {font-family: 'Courier New', Courier, monospace; font-size: 1.1em; color: #
 acronym {border-bottom: 1px solid #8fb7bf;}
 small {font-size: 0.8em;}
 h1, h2, h3, h4 {font-weight: normal; line-height: 120%;padding: 0 0 0.1em 0;}
-h1 {font-size: 2em;}
-h2 {font-size: 1.5em; border-bottom: 1px solid #ccc;}
-h3 {font-size: 1.25em; text-transform: uppercase;}
-h4 {font-size: 0.8em;text-transform: uppercase;}
+h1{font-size: 1.4em}
+h2{font-size: 1.2em;font-weight: bold; padding:4px;margin-bottom:6px;}
+h3{font-size: 1.1em; font-variant: all-small-caps;}
+h4{font-size: 1em; font-style: italic;font-variant: all-small-caps;}
+h5{font-size: 0.9em; font-style: italic;font-variant: all-small-caps;}
 input, select, textarea {width:150px;}
 input[type=radio], input[type=checkbox] {width:16px;}
 a {text-decoration: none;}
+hr { height: 1px; background: lightgray; border: none; }
 /*a:link, a:visited, a:active {color: #00B7FF;}
 a:hover {color: #a8001c;}*/
 

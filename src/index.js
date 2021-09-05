@@ -1,6 +1,6 @@
 import DM from './dm.js'
 import './components/elementImports.js'
-import css from "./styles/main.css";
+import css from "./styles/app.css";
 
 document.addEventListener('DOMContentLoaded', event => {
     let pageManager = document.getElementById('pageManager'),

@@ -1,13 +1,9 @@
-(function() { 
+import styles from "./bm-tabs.style.css";
+import html from "./bm-tab.html";
 
-let template = document.createElement('template');
-template.innerHTML = /*html*/`
-	<style>
-        /*@import url("../styles/bm-tabs.css");*/
-        :host {cursor: pointer}
-    </style>
-    <div id="tab" class="tab"><slot></slot></div>
-`;
+(function() { 
+const template = document.createElement('template');
+template.innerHTML = html;
 
 class BmTab extends HTMLElement {
     static get is() { return 'bm-tab'; }
@@ -21,6 +17,7 @@ class BmTab extends HTMLElement {
 
         // Attach a shadow root to the element.
         const shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.innerHTML = `<style>${styles}</style>`;
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
     get title() { return this._title; }

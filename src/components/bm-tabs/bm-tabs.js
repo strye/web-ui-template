@@ -1,15 +1,9 @@
-(function() { 
+import styles from "./bm-tabs.style.css";
+import html from "./bm-tabs.html";
 
-let template = document.createElement('template');
-template.innerHTML = /*html*/`
-	<style>
-        /*@import url("../styles/bm-tabs.css");*/
-        :host {display: block;}
-    </style>
-    <div class="tab-conatiner">
-        <slot></slot>
-    </div>
-`;
+(function() { 
+const template = document.createElement('template');
+template.innerHTML = html;
 
 class BmTabs extends HTMLElement {
     static get is() { return 'bm-tabs'; }
@@ -21,14 +15,16 @@ class BmTabs extends HTMLElement {
 
         // Attach a shadow root to the element.
         const shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.innerHTML = `<style>${styles}</style>`;
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
-
-    setActive(idx) {
-        this._tabs.forEach(tab => {
-            tab.selected = (tab.index === idx)
-        });
+    get selectedIdx() { return this._selectedIdx; }
+    set selectedIdx(val) {
+        let tab = this._tabs[val];
+        this.tabChange({index: tab.index, value: tab.tabValue})
     }
+    get selectedTab() { return this._tabs[this._selectedIdx]; }
+
     tabChange(detail) {
         if (this._selectedIdx === detail.index) return;
 
@@ -51,7 +47,9 @@ class BmTabs extends HTMLElement {
         children.forEach(tab => {
             if(tab.nodeName.toLowerCase() === 'bm-tab') {
                 tab.index = index;
-                if (tab.selected) this._selectedIdx = index;
+                if (tab.selected) {
+                    this._selectedIdx = index;
+                }
                 index++;
                 this._tabs.push(tab);
                 tab.addEventListener('selected', evt => { self.tabChange(evt.detail) })

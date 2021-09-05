@@ -16,6 +16,10 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },            
+            {
                 test: /(?<!\.style).css$/,
                 use: ['style-loader', 'css-loader']
             },

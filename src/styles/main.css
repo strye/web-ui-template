@@ -2,11 +2,6 @@
 @import url("color-pallet.css");
 @import url("active-icons.css");
 
-/*
-@import url("bm-tabs.css");
-@import url("display-card.css");
-@import url("right-menu.css");
-*/
 
 /* Basic Styling
 ----------------------------------------------- */
@@ -15,22 +10,13 @@ body
 {
 	height: 100%;
 	font-size: 14px;
-	font-family: "Amazon Ember", "Lucida Grande", Helvetica, Arial, Sans-Serif;
+	font-family: "Lucida Grande", Helvetica, Arial, Sans-Serif;
 	margin: 0;
 	color: #232323;
-	background-color: #fff;
+	background-color: #666;
 	text-align: center;
 }
 
-
-
-h1{font-size: 1.4em}
-h2{font-size: 1.2em;font-weight: bold; padding:4px;margin-bottom:6px;}
-h3{font-size: 1.1em; font-variant: all-small-caps;}
-h4{font-size: 1em; font-style: italic;font-variant: all-small-caps;}
-h5{font-size: 0.9em; font-style: italic;font-variant: all-small-caps;}
-
-hr { height: 1px; background: lightgray; border: none; }
 
 
 button {background-color: var(--color-4);}
@@ -38,7 +24,7 @@ button {background-color: var(--color-4);}
 a { color: #ff9900; }
 
 
-
+/*
 header {
 	text-align: left;
 	position: relative; 
@@ -51,6 +37,8 @@ header {
 	box-shadow: 0 5px 10px #888;
 }
 header h1 {font-size: 1.5em; padding: 0; margin: 0 8px;text-align: left;}
+*/
+
 
 .nav-menu {margin-top: 24px; text-align: right;}
 .nav-menu a, #btLogout, #btLogin {color:var(--secondary-fn-color); padding: 4px 12px;}

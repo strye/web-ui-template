@@ -1,3 +1,8 @@
+:host {
+    display: inline-block;
+    text-align: center;
+    position: relative; 
+}
 .card {
     float: left;
     position: relative;

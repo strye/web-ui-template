@@ -1,22 +1,8 @@
-import styles from "../styles/display-card.style.css";
+import styles from "./display-card.style.css";
+import html from "./display-card.html";
 
 const template = document.createElement('template');
-template.innerHTML = /*html*/`
-<style>
-	/*@import url("/styles/display-card.css");*/
-	:host {
-        display: inline-block;
-		text-align: center;
-		position: relative; 
-	}
-</style>
-<div id="card" class="card">
-	<div class="card-bg"></div>
-	<div class="card-title" id="cardTitle"></div>
-	<div class="card-desc" id="cardDesc"></div>
-</div>
-`;
-
+template.innerHTML = html;
 
 class DisplayCard extends HTMLElement {
     static get is() {
@@ -32,6 +18,7 @@ class DisplayCard extends HTMLElement {
 
         // Attach a shadow root to the element.
         const shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.innerHTML = `<style>${styles}</style>`;
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
 

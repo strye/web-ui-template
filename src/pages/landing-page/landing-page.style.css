@@ -1,0 +1,10 @@
+
+:host {
+    display: block; 
+    /*height: 100vh;*/ 
+    height: calc(100vh - 100px);
+    background-color: #99f;
+}
+
+h1 {margin-bottom: 18px;font-size:1.4em;padding:4px 18px;}
+
