@@ -1,12 +1,18 @@
 let template = document.createElement('template');
 template.innerHTML = /*html*/`
 	<style>
-        :host {display:block;}
+        :host {
+			display:block; 
+			background-color: #222;
+			flex: auto;
+			display: flex;
+			flex-flow: column;
+		}
 		/*:host > ::slotted(:not(slot):not(.selected)) { display: none !important; }*/
-		#mainContent {width:100%; height: 100%;}
+		#mainContent { padding:0; margin: 0; flex: auto; display: flex;}
     </style>
-    <slot></slot>
     <div id="mainContent"></div>
+    <slot></slot>
 `;
 
 class PageManager extends HTMLElement {

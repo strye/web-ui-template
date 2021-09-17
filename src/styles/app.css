@@ -5,18 +5,28 @@
 	flex-flow: column;
 	height: 100vh;
 }
-
 .app-header {
 	color: white;
-	background: linear-gradient(30deg, #f90 55%, #ffc300);
+	background: linear-gradient(30deg, #f60 55%, #ff9900);
 	margin: 0;
-	padding-bottom: 15px;
-	/*box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);*/
-	flex: auto 0;
+	flex: 1;
 	display: flex;
 	flex-direction: row;
+
+	height:50px
+}
+.app-body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+	height: calc(100vh - 50px);
+	background-color: #efe;
 }
 
+
+
+/*** .app-header ***/
 .hdr-toolbar {
 	float:right;
 	text-align: right;
@@ -30,16 +40,18 @@
 }
 
 .app-title {
-	margin: 15px auto 0 auto;
+	margin: 15px auto;
 	font-size: 1.5em;
 }
 .app-title img {
-	width: 40px;
+	width: 24px;
 	margin-right: 10px;
 }
 
-.app-body {
-	flex: 1 1 auto;
-	display: flex;
-	flex-direction: column;
+
+/*** .app-body **/
+page-manager {
+	padding: 0;
+	margin: 0;
+	height: calc(100vh - 50px);
 }

@@ -8,36 +8,20 @@
 html,
 body
 {
-	height: 100%;
+	height: 100vh;
 	font-size: 14px;
 	font-family: "Lucida Grande", Helvetica, Arial, Sans-Serif;
 	margin: 0;
 	color: #232323;
-	background-color: #666;
+	background-color: #66f;
 	text-align: center;
 }
 
 
 
 button {background-color: var(--color-4);}
-
 a { color: #ff9900; }
 
-
-/*
-header {
-	text-align: left;
-	position: relative; 
-
-	padding: 16px;
-	background-color: var(--secondary-bg-color);
-	color: var(--secondary-fn-color);
-	height:60px;
-	margin:0;
-	box-shadow: 0 5px 10px #888;
-}
-header h1 {font-size: 1.5em; padding: 0; margin: 0 8px;text-align: left;}
-*/
 
 
 .nav-menu {margin-top: 24px; text-align: right;}
@@ -48,10 +32,6 @@ header h1 {font-size: 1.5em; padding: 0; margin: 0 8px;text-align: left;}
 .page {
 	text-align: left;
     padding: 6px 12px 0 12px;
-	/*
-	margin-top: 6px;
-	padding: 6px 0;
-	*/
 }
 .page h1 {margin: -6px -12px 8px -12px; padding: 12px; background-color: var(--color-7);}
 .page h2 {margin: 12px 0; border-bottom: 2px solid #000; }
@@ -60,12 +40,9 @@ header h1 {font-size: 1.5em; padding: 0; margin: 0 8px;text-align: left;}
 .content {
 	margin: 15px 20px;
 	text-align: left;
+    padding: 6px 12px 0 12px;
 }
 
-
-footer {background-color: #333; padding:6px 0 0 6px; color:#eee; margin:0;
-	position: fixed; bottom: 0;width:100%;height:25px;}
-footer h2 {font-size: .9em; font-style: italic;width:960px;text-align: center;margin:0 auto;border:0;}
 
 
 

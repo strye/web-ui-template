@@ -1,9 +1,11 @@
 
 :host {
     display: block; 
-    /*height: 100vh;*/ 
-    height: calc(100vh - 100px);
-    background-color: #99f;
+    height: 100%; 
+    /*height: calc(100vh - 100px);*/
+	background-color: var(--main-bg-color);
+	padding:0; margin: 0;
+	flex: auto;
 }
 
 h1 {margin-bottom: 18px;font-size:1.4em;padding:4px 18px;}
