@@ -9,3 +9,4 @@ import '../pages/landing-page/landing-page.js';
 import '../pages/cards-page/cards-page.js';
 import '../pages/tabs-page/tabs-page.js';
 import '../pages/about-page/about-page.js';
+import '../pages/icon-page/icon-page.js';

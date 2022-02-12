@@ -1,0 +1,33 @@
+@import url("../../styles/active-icons.css");
+@import url("../../styles/icons/base-icons.css");
+@import url("../../styles/icons/av-icons.css");
+@import url("../../styles/icons/device-icons.css");
+@import url("../../styles/icons/editor-icons.css");
+@import url("../../styles/icons/hardware-icons.css");
+@import url("../../styles/icons/images-icons.css");
+@import url("../../styles/icons/map-icons.css");
+@import url("../../styles/icons/notification-icons.css");
+@import url("../../styles/icons/places-icons.css");
+@import url("../../styles/icons/social-icons.css");
+
+:host {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	background-color: aliceblue;
+}
+.elm {
+	float: left;
+	position: relative;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	min-width: 100px;
+	min-height:75px;
+	margin: 8px;
+	border: 2px solid #000;
+	border-radius: 8px;
+	color:#000;
+}
+.title {font-size: 1.25em;padding: 0 4px}
+.clearfix{clear: both;}
+.hidden { display: none;}

@@ -34,7 +34,8 @@ module.exports = {
 		client: {
 			overlay: true,
 		},
-        hot: true
+        hot: true,
+		port: 9000
     },
     plugins: [
         new CopyWebpackPlugin({
