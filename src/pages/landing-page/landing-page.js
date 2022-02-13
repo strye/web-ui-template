@@ -1,3 +1,4 @@
+import DM from '../../dm.js';
 import styles from "./landing-page.style.css";
 import html from "./landing-page.html";
 
@@ -9,6 +10,12 @@ class LandingPage extends HTMLElement {
     static get is() { return 'landing-page'; }
     constructor() {
         super();
+		this._pages = [
+			{ order: 1, pageId: 'gotoCards', pageTitle: 'Card List', eventNm: 'cards' },
+			{ order: 2, pageId: 'gotoTabs', pageTitle: 'Tabs Page', eventNm: 'tabs' },
+			{ order: 3, pageId: 'gotoIcons', pageTitle: 'Icon Samples', eventNm: 'icons' },
+			{ order: 4, pageId: 'gotoAbout', pageTitle: 'About', eventNm: 'about' },
+		];
 
         // Attach a shadow root to the element.
         const shadowRoot = this.attachShadow({mode: 'open'});
@@ -16,18 +23,20 @@ class LandingPage extends HTMLElement {
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
-    connectedCallback() {
-        let self = this;
-        const gotoCards = this.shadowRoot.getElementById("gotoCards");
-        const gotoTabs = this.shadowRoot.getElementById("gotoTabs");
-        const gotoIcons = this.shadowRoot.getElementById("gotoIcons");
-        const gotoAbout = this.shadowRoot.getElementById("gotoAbout");
+	render() {
+		const self = this,
+		siteNav = this.shadowRoot.getElementById("siteNav"),
+		sn = DM.Target(siteNav);
+		sn.clear();
 
-        gotoCards.addEventListener("click", (e) => { self.gotoPage(e,'cards') });
-        gotoTabs.addEventListener("click", (e) => { self.gotoPage(e,'tabs') });
-        gotoIcons.addEventListener("click", (e) => { self.gotoPage(e,'icons') });
-		gotoAbout.addEventListener("click", (e) => { self.gotoPage(e,'about') });
-    }
+		this._pages.forEach(page => {
+			sn.append('div').append('a')
+			.attr('id', page.pageId)
+			.attr('href','#')
+			.text(page.pageTitle)
+			.listen('click', e => { self.gotoPage(e, page.eventNm) })
+		});
+	}
 	gotoPage(e, pageName) {
 		this.dispatchEvent(new CustomEvent('select', {
 			bubbles: true,
@@ -36,6 +45,11 @@ class LandingPage extends HTMLElement {
 		}));
 		e.stopPropagation();
 	}
+
+    connectedCallback() {
+		this.render();
+    }
+
 
 
 }  // END LandingPage
